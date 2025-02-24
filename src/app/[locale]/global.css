@@ -1,0 +1,14 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --color-bg: #e1e4e2;
+  }
+}
+
+body {
+  font-family: var(--font-ibm-plex-sans);
+  background-color: var(--color-bg);
+}

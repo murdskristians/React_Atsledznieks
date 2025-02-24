@@ -1,0 +1,22 @@
+.rect {
+  &:before {
+    content: "";
+    height: 100px;
+    width: 100px;
+    background-color: #e1e4e2;
+    position: absolute;
+    top: -16px;
+    left: -16px;
+    clip-path: polygon(0% 0%, 100% 0%, 0% 100%, 0% 100%);
+  }
+  &:after {
+    content: "";
+    height: 100px;
+    width: 100px;
+    background-color: #e1e4e2;
+    position: absolute;
+    bottom: -16px;
+    right: -16px;
+    clip-path: polygon(0% 100%, 100% 0%, 100% 100%, 0% 100%);
+  }
+}
