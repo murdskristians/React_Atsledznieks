@@ -1,60 +1,63 @@
-import { MutableRefObject, useEffect, useRef, useState } from "react";
-import mergeRight from "ramda/src/mergeRight";
+import { useEffect, useState } from "react";
 
-function getTrigger(
-  ref: MutableRefObject<number>,
-  options: {
-    disableHysteresis?: boolean;
-    threshold?: number;
-    target?: any;
-  }
-) {
-  const { disableHysteresis = false, threshold = 100, target } = options;
-  const previous = ref.current;
-  if (target) {
-    ref.current =
-      target.scrollY !== undefined ? target.scrollY : target.scrollTop;
-  }
-  if (!disableHysteresis && previous !== undefined) {
-    if (ref?.current < previous) {
-      return false;
-    }
-  }
-  return ref.current > threshold;
+interface Options {
+  disableHysteresis?: boolean;
+  target?: Node | Window | null;
+  threshold?: number;
 }
 
-const defaultTarget = typeof window !== "undefined" ? window : null;
+export const useScrollTrigger = (options: Options = {}) => {
+  const { disableHysteresis = false, target, threshold = 100 } = options;
 
-export default function useScrollTrigger({
-  target = defaultTarget,
-  ...other
-} = {}) {
-  const ref = useRef<number>(0);
-  const [trigger, setTrigger] = useState(() => getTrigger(ref, other));
+  const [trigger, setTrigger] = useState(false);
+  const [scrollTop, setScrollTop] = useState(0);
 
   useEffect(() => {
+    let previousScrollTop = scrollTop;
+    
+    const getTrigger = (newScrollTop: number) => {
+      if (disableHysteresis) {
+        return newScrollTop > threshold;
+      }
+
+      if (newScrollTop < threshold) {
+        return false;
+      }
+
+      if (previousScrollTop > newScrollTop) {
+        return false;
+      }
+
+      return true;
+    };
+
     const handleScroll = () => {
-      setTrigger(
-        getTrigger(
-          ref,
-          mergeRight(other, {
-            target,
-          })
-        )
-      );
+      const targetNode = target || window;
+      let newScrollTop = 0;
+      if (targetNode === window) {
+        newScrollTop = window.scrollY;
+      } else if (targetNode && "scrollTop" in targetNode) {
+        // This is casting the targetNode to Element to access scrollTop
+        newScrollTop = (targetNode as Element).scrollTop;
+      }
+
+      // Check if newScrollTop is a valid number
+      if (typeof newScrollTop === "number") {
+        const update = getTrigger(newScrollTop);
+        previousScrollTop = newScrollTop; // Update for next scroll event
+        setScrollTop(newScrollTop);
+        setTrigger(update);
+      }
     };
 
-    handleScroll();
+    const targetNode = target || window;
+    targetNode.addEventListener("scroll", handleScroll);
+    handleScroll(); // Initialize
 
-    target?.addEventListener("scroll", handleScroll, {
-      passive: true,
-    });
     return () => {
-      target?.removeEventListener("scroll", handleScroll, {
-        passive: true,
-      } as any);
+      targetNode.removeEventListener("scroll", handleScroll);
     };
-  }, [target, getTrigger, JSON.stringify(other)]);
+  }, [disableHysteresis, target, threshold, scrollTop]);
 
   return trigger;
-}
+};
