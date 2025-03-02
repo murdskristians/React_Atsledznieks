@@ -7,7 +7,7 @@ export default function PrivacyPolicy() {
       <section className="mb-8">
         <h2 className="text-xl font-semibold mb-4">1.1. Vispārīgā informācija</h2>
         <ul className="list-disc pl-6 space-y-2">
-          <li>Šī privātuma politika (turpmāk – "Politika") regulē, kā Māju Drošība SIA (reģ. Nr. 40203622224, PVN maks. Nr. LV40203622224, juridiskā adrese: Duntes iela 28-69, Rīga, LV-1005; ofiss/noliktava: Braslas iela 22, 18. kab., turpmāk – "Uzņēmums" vai "mēs") vāc, izmanto, uzglabā un aizsargā personas datus, ko vietnes www.atsledznieks.lv (turpmāk – "Vietne") apmeklētāji (turpmāk – "Lietotāji" vai "jūs") sniedz, izmantojot Vietni.</li>
+          <li>Šī privātuma politika (turpmāk – &quot;Politika&quot;) regulē, kā Māju Drošība SIA (reģ. Nr. 40203622224, PVN maks. Nr. LV40203622224, juridiskā adrese: Duntes iela 28-69, Rīga, LV-1005; ofiss/noliktava: Braslas iela 22, 18. kab., turpmāk – &quot;Uzņēmums&quot; vai &quot;mēs&quot;) vāc, izmanto, uzglabā un aizsargā personas datus, ko vietnes www.atsledznieks.lv (turpmāk – &quot;Vietne&quot;) apmeklētāji (turpmāk – &quot;Lietotāji&quot; vai &quot;jūs&quot;) sniedz, izmantojot Vietni.</li>
           {/* Add the rest of the privacy policy content here */}
         </ul>
       </section>
