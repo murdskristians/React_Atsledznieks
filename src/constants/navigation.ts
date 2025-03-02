@@ -7,4 +7,6 @@ export const enum URL {
   SAFES = "/safes",
   CATALOG = "/catalog",
   PRODUCT = "/catalog/[slug]",
+  PRIVACY_POLICY = "/privacy-policy",
+  TERMS_CONDITIONS = "/terms-conditions"
 }

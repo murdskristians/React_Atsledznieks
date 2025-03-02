@@ -1,5 +1,5 @@
 "use client";
-import { Nav } from "@/components/Nav";
+import { TopNav } from "@/components/Nav";
 // import { Button } from "@/components/Button";
 import { useTranslations } from "@/hooks/useTranslations";
 import { LanguageSelect } from "@/components/LanguageSelect";
@@ -20,7 +20,7 @@ export const DesktopHeader = () => {
       <Link href={URL.HOME}>
         <Logo />
       </Link>
-      <Nav />
+      <TopNav />
       <LanguageSelect />
       {/* <Button onClick={onClick}>{t("contactUs")}</Button> */}
     </div>

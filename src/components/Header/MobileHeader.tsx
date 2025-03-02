@@ -2,7 +2,7 @@
 import { useEffect, useState } from "react";
 import not from "ramda/src/not";
 import { Logo } from "@/components/Logo";
-import { Nav } from "@/components/Nav";
+import { TopNav } from "@/components/Nav";
 import { Drawer } from "@/components/Drawer";
 import { CallToActionButtons } from "@/components/CallToActionButtons";
 import { LanguageSelect } from "@/components/LanguageSelect";
@@ -50,7 +50,7 @@ export const MobileHeader = () => {
             <div className="h-[1px] bg-slate-400 w-52 skew-y-[-40deg] origin-left mt-4" />
           </div>
         </div>
-        <Nav direction="column" />
+        <TopNav direction="column" />
         <div className="h-[1px] bg-slate-400 w-full my-5" />
         <LanguageSelect />
       </Drawer>

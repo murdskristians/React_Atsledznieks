@@ -3,7 +3,7 @@ import clsx from "clsx";
 
 import { Logo } from "@/components/Logo";
 import { CallToActionButtons } from "@/components/CallToActionButtons";
-import { Nav } from "@/components/Nav";
+import { BottomNav } from "@/components/Nav";
 // import { usePathname } from "@/i18n/routing";
 // import { URL } from "@/constants/navigation";
 
@@ -35,7 +35,7 @@ export const Footer = () => {
         <div className="sm:hidden">
           <FooterMiddleLine />
         </div>
-        <Nav direction="column" />
+        <BottomNav direction="column" />
         <p className="self-end">© 2024. All rights reserved.</p>
       </footer>
     </div>
