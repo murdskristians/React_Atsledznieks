@@ -1,9 +1,14 @@
+"use client";
+
 import Image from "next/image";
 import { ContentWrapper } from "@/components/ContentWrapper";
 import { PageSectionTitle } from "@/components/PageSectionTitle";
 import { useTranslations } from "@/hooks/useTranslations";
 import { CallButton } from "@/components/CallButton";
 import { FixedProductCallButton } from "@/components/FixedProductCallButton";
+import { useState } from "react";
+import { Link } from "@/i18n/routing";
+import { URL } from "@/constants/navigation";
 
 interface IProps {
   product: IProduct;
@@ -11,6 +16,13 @@ interface IProps {
 
 export const ProductPage = (props: IProps) => {
   const t = useTranslations("Catalog");
+  const [termsAccepted, setTermsAccepted] = useState(false);
+
+  const handleBuyClick = () => {
+    // Implement buy functionality here
+    console.log("Buy clicked for product:", props.product.title);
+    // Could open a modal, redirect to checkout, etc.
+  };
 
   return (
     <>
@@ -38,6 +50,41 @@ export const ProductPage = (props: IProps) => {
             {t("description")}
           </h2>
           <p>{props.product.description}</p>
+          
+          {/* Terms agreement checkbox */}
+          <div className="mt-8">
+            <label className="flex items-start gap-2 cursor-pointer">
+              <input 
+                type="checkbox" 
+                checked={termsAccepted}
+                onChange={(e) => setTermsAccepted(e.target.checked)}
+                className="mt-1"
+              />
+              <span className="text-sm">
+                Piekrītu{" "}
+                <Link href={URL.TERMS_CONDITIONS} className="text-blue-600 hover:underline">
+                  lietošanas noteikumiem
+                </Link>
+                {" "}un{" "}
+                <Link href={URL.PRIVACY_POLICY} className="text-blue-600 hover:underline">
+                  privātuma politikai
+                </Link>.
+              </span>
+            </label>
+          </div>
+          
+          {/* Buy button */}
+          <button
+            onClick={handleBuyClick}
+            disabled={!termsAccepted}
+            className={`mt-6 px-8 py-3 font-bold text-white ${
+              termsAccepted 
+                ? "bg-blue-600 hover:bg-blue-700" 
+                : "bg-gray-400 cursor-not-allowed"
+            } transition-colors rounded-md`}
+          >
+            Pirkt
+          </button>
         </div>
       </ContentWrapper>
       <div className="md:hidden">
