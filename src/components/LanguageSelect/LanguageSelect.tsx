@@ -3,6 +3,7 @@ import { Select } from "@/components/Select";
 import { LOCALE } from "@/constants/types";
 import { usePathname, useRouter } from "@/i18n/routing";
 import { useParams } from "next/navigation";
+import "./LanguageSelectStyles.css";
 
 export const LanguageSelect = () => {
   const pathname = usePathname();
@@ -14,10 +15,16 @@ export const LanguageSelect = () => {
   };
 
   return (
-    <Select value={params.locale} onChange={handleChange}>
-      <option value={"lv"}>LV</option>
-      <option value={"en"}>EN</option>
-      <option value={"ru"}>RU</option>
-    </Select>
+    <div className="language-select-wrapper">
+      <Select 
+        value={params?.locale || "en"} 
+        onChange={handleChange}
+        className="language-select"
+      >
+        <option value={"lv"}>LV</option>
+        <option value={"en"}>EN</option>
+        <option value={"ru"}>RU</option>
+      </Select>
+    </div>
   );
 };
