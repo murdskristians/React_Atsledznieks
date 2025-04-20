@@ -2,7 +2,7 @@ export const ALL_PRODUCTS: IProduct[] = [
   {
     id: 1,
     slug: "tedee-pro-smart-lock-set-with-pin-keypad-wi-fi-with-remote-control-and-bluetooth",
-    imageUrl: "/static/images/products/TEDEE PRO viedās slēdzenes komplekts ar PIN koda tastatūru, Wi-Fi ar tālvadības pulti un Bluetooth.jpg",
+    imageUrl: "/static/images/products/TEDEE_PRO_silver.jpg",
     title: "TEDEE PRO viedās slēdzenes komplekts ar PIN koda tastatūru, Wi-Fi ar tālvadības pulti un Bluetooth",
     price: 580,
     description: "Standarta uzticama slēdzene ar uzlabotu furnitūru, kas nodrošina papildu aizsardzību pret uzlaušanu un neatļautu slēdzenes atvēršanu. Ideāli piemērota tiem, kas vēlas paaugstināt drošības līmeni savās mājās vai pēc pieprasījuma. Aprīkota ar Wi-Fi un Bluetooth savienojamību, PIN koda tastatūru, EURO tipa universālo cilindru un ir piemērota dažādu veidu durvīm.",
@@ -11,7 +11,7 @@ export const ALL_PRODUCTS: IProduct[] = [
   },
   {
     id: 2,
-    imageUrl: "/static/images/products/Viedā slēdzene TEDEE PRO ar Bluetooth melnā krāsā.jpg",
+    imageUrl: "/static/images/products/TEDEE_PRO_ar_Bluetooth_black.jpg",
     slug: "smart-tedee-pro-lock-with-bluetooth-black",
     title: "Viedā slēdzene TEDEE PRO ar Bluetooth melnā krāsā",
     price: 300,
@@ -21,7 +21,7 @@ export const ALL_PRODUCTS: IProduct[] = [
   },
   {
     id: 3,
-    imageUrl: "/static/images/products/TEDEE_PRO_silver.jpg",
+    imageUrl: "/static/images/products/TEDEE_PRO_ar_Bluetooth_silver.png",
     slug: "smart-tedee-pro-lock-with-silver-bluetooth",
     title: "Viedā slēdzene TEDEE PRO ar Bluetooth sudraba krāsā",
     price: 300,
@@ -63,7 +63,7 @@ export const ALL_PRODUCTS: IProduct[] = [
     id: 7,
     imageUrl: "/static/images/products/bezvadu_tastatura.png",
     slug: "ajax-keypad-touchscreen-w-bezvadu-tastatura-balta",
-    title: "AJAX Keypad TouchScreen W (8EU) - Bezvadu tastatūra, balta",
+    title: "AJAX Keypad TouchScreen W (8EU) - Bezvadu tastatūra",
     price: 315,
     description: "Bezvadu tastatūra ar skārienekrānu Ajax sistēmas vadīšanai. KeyPad TouchScreen – apvieno drošību un iespēju vadīt viedās mājas ierīces. Intuitīvais interfeiss atbalsta vairākas valodas, dublē Ajax lietojumprogrammu un atvieglo tastatūras lietošanu.",
     category: "Signalizācija",
@@ -101,7 +101,7 @@ export const ALL_PRODUCTS: IProduct[] = [
   },
   {
     id: 11,
-    imageUrl: "/static/images/products/EZSVIZ camera.jpg",
+    imageUrl: "/static/images/products/camera.png",
     slug: "ezviz-wi-fi-videokameras",
     title: "EZVIZ Wi-Fi videokameras",
     price: 150,
