@@ -36,7 +36,7 @@ export const Footer = () => {
           <FooterMiddleLine />
         </div>
         <BottomNav direction="column" />
-        <p className="self-end">© 2024. All rights reserved.</p>
+        <p className="self-end">© 2025. All rights reserved.</p>
       </footer>
     </div>
   );

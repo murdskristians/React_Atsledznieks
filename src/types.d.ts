@@ -15,4 +15,6 @@ interface IProduct {
   title: string;
   price: number;
   description: string;
+  category: string;
+  subcategory: string;
 }
