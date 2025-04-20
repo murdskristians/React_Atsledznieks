@@ -56,7 +56,7 @@ export const ALL_PRODUCTS: IProduct[] = [
     title: "EZVIZ Wi-Fi CS-HP7 domofona komplekts",
     price: 340,
     description: "Palieliniet savas mājas drošību, izmantojot viedāku drošas piekļuves risinājumu. Nomainiet savu veco domofonu sistēmu ar internetam pieslēgtu, ar tālvadību vadāmu, ar lietotni vadāmu risinājumu. EZVIZ pirmais video durvju zvans HP7 nodrošina māju īpašniekiem lielākas ērtības, ļaujot tiem skatīt, sazināties un koplietot piekļuvi ar apmeklētājiem no jebkuras vietas, pat atrodoties prom no mājām. Šī āra kamera un tālruņu sistēma \"divi vienā\" ne tikai ieraksta 2K video, bet arī nosaka cilvēkus un nosūta tūlītējus mobilos paziņojumus, lai palīdzētu uzlabot mājas drošību",
-    category: "Piekļuves tiesības",
+    category: "Piekļuves kontrole",
     subcategory: "EZVIZ",
   },
   {
@@ -246,7 +246,7 @@ export const ALL_PRODUCTS: IProduct[] = [
     title: "DS-KV6113-WPE1 ieejas videopanelis",
     price: 178.90,
     description: "DS-KV6113-WPE1 ir ūdensizturīgs metāla ieejas videopanelis ar integrētu kameru un mikrofonu. Tas piedāvā augstu izšķirtspēju un nodrošina skaidru attēlu pat naktī. Ar WDR un infrasarkano staru nakts redzamību tas ir lielisks risinājums piekļuves kontrolei jūsu īpašumā. Specifikācija: Produkta veids: ieejas videopanelis, Kameras izšķirtspēja: 1920 × 1080, Kadru ātrums: 1920 × 1080 ar ātrumu 30 kadri/sekundē, Diapazons: 3 m, Ražotājs: Hikvision",
-    category: "Piekļuves tiesības",
+    category: "Piekļuves kontrole",
     subcategory: "Videopanelis",
   },
   {
@@ -256,7 +256,7 @@ export const ALL_PRODUCTS: IProduct[] = [
     title: "Trinity HD AHD/CVBS videonamruņa ieejas panelis",
     price: 67.90,
     description: "Trinity HD AHD/CVBS videonamruņa ieejas panelis nodrošina skaidru un drošu saziņu ar apmeklētājiem. Ar 2MP izšķirtspēju un 130° horizontālo skata leņķi tas sniedz skaidru un plašu redzamību. Izgatavots no alumīnija sakausējuma, tas ir izturīgs un ilgmūžīgs. Specifikācija: Produkta veids: videonamruņa ieejas panelis, Materiāls: alumīnija sakausējums, Skata leņķis: 130°, Apgaismojums: LED, Darbības temperatūra: -30 – +50 °C, Izmēri: garums 133 mm, platums 48 mm, augstums 17 mm",
-    category: "Piekļuves tiesības",
+    category: "Piekļuves kontrole",
     subcategory: "Trinity",
   },
   {
@@ -266,7 +266,7 @@ export const ALL_PRODUCTS: IProduct[] = [
     title: "Sejas atpazīšanas terminālis DS-K1T680DG",
     price: 499.80,
     description: "DS-K1T680DG sejas atpazīšanas terminālis ir lielisks lielu uzņēmumu vajadzībām. Ar iespēju uzglabāt līdz pat 100 000 seju, 100 000 karšu un reģistrēt 150 000 notikumu šis terminālis nodrošina augstu drošības līmeni. Tam ir dažādas savienojuma opcijas, kas ļauj integrēt to ar esošajām sistēmām, un tas piedāvā lielu atpazīšanas ātrumu un augstu precizitāti. Specifikācija: Atpazīšanas attālums: no 0,3 līdz 3 m, Atpazīšanas ātrums: 0,2 sekundes, precizitāte ≥ 99%, Audio: divvirzienu, Ekrāns: astoņu collu kapacitīvs skārienekrāns, Atmiņa: 1500 pirkstu nospiedumu, 1500 seju atmiņa, 1500 karšu atmiņa un 150 000 notikumu ietilpība, Ražotājs: HikVision",
-    category: "Piekļuves tiesības",
+    category: "Piekļuves kontrole",
     subcategory: "Sejas atpazīšanas terminālis",
   },
   {
@@ -276,7 +276,7 @@ export const ALL_PRODUCTS: IProduct[] = [
     title: "D-40 autonomais kontrolieris ar nolasītāju un šifrēju",
     price: 298.99,
     description: "D-40 kontrollers ar nolasītāju un šifrētāju ir piemērots ārējai instalācijai, nodrošinot drošību un piekļuvi telpām vai teritorijai. Tas darbojas ar EM 125 KHz frekvenci un var uzglabāt līdz pat 2000 lietotāju. Viegli uzstādāms un lietojams, šis kontrollers nodrošina drošu un vienkāršu piekļuves kontroli jebkurā situācijā. Cena ir norādīta par visu komplektu, un katram klientam cena var atšķirties. Specifikācija: Instalācijas veids: ārējais, Nolasītāja frekvence: EM 125 KHz, Lietotāju skaits: 2000, Darba spriegums: 12 VDC, Nolasītāja darbības attālums: 3–6 cm, Atmiņa: līdz 2000 kartītēm un kodiem, Darbības frekvence: EM 125 kHz, Aizsardzība: IP68",
-    category: "Piekļuves tiesības",
+    category: "Piekļuves kontrole",
     subcategory: "D-40",
   },
   {
@@ -286,7 +286,7 @@ export const ALL_PRODUCTS: IProduct[] = [
     title: "EZVIZ DP2C Bezvadu durvju actiņa ar monitoru",
     price: 198.99,
     description: "EZVIZ DP2C ir novatorisks komplekts, kas apvieno durvju kameras un zvaniņa funkciju vienā ierīcē. Ar iekšējo krāsaino monitoru varēsiet ne tikai identificēt apmeklētājus, bet arī sazināties ar tiem. Iespēja saņemt brīdinājumus par potenciāli aizdomīgu aktivitāti tieši uz jūsu mobilo ierīci padara šo komplektu par lielisku risinājumu jūsu mājas drošībai un komfortam. Stilīgs, mūsdienīgs dizains, ātra uzstādīšana un viegla savienojamība ar jūsu mobilo ierīci, izmantojot mājas Wi-Fi tīklu. Specifikācija: Video: 1080 p, Skata leņķis: 155°, Ekrāns: 4,3 collu, krāsains, Akumulators: 4600 mAh uzlādējams litija akumulators, Apgaismojums: līdz 5 m, Atmiņas kartes atbalsts: MicroSD (līdz 256 GB), Ražotājs: EZVIZ",
-    category: "Piekļuves tiesības",
+    category: "Piekļuves kontrole",
     subcategory: "Domofoni",
   },
   {

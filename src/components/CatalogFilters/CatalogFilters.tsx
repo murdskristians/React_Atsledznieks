@@ -11,26 +11,39 @@ const CATEGORIES = [
   {
     titleId: "locks",
     imageUrl: "/static/images/lock/hero-2.png",
+    category: "Slēdzenes",
   },
   {
     titleId: "alarms",
     imageUrl: "/static/images/alarm/hero-1.png",
+    category: "Signalizācija",
   },
   {
     titleId: "cctv",
     imageUrl: "/static/images/alarm/hero-3.png",
+    category: "Videonovērošana",
   },
   {
     titleId: "access",
     imageUrl: "/static/images/access/hero-3.png",
+    category: "Piekļuves kontrole",
   },
   {
     titleId: "safes",
     imageUrl: "/static/images/safes/hero-1.png",
+    category: "Seifi",
   },
 ];
 
-export const CatalogFilters = () => {
+interface CatalogFiltersProps {
+  selectedCategories: string[];
+  onCategoryToggle: (category: string) => void;
+}
+
+export const CatalogFilters = ({ 
+  selectedCategories = [], 
+  onCategoryToggle 
+}: CatalogFiltersProps) => {
   const t = useTranslations("Catalog");
 
   const handleScopeTraslation = ({
@@ -56,9 +69,14 @@ export const CatalogFilters = () => {
         <div className="h-[1px] bg-slate-400 w-[300%] absolute bottom-0 -left-[300%]" />
       </div>
       <ul className="md:basis-2/3 grid grid-cols-3 gap-4 mb-8 md:mt-20 place-content-start">
-        {categories.map(({ title, imageUrl }) => (
+        {categories.map(({ title, imageUrl, category }) => (
           <li key={title}>
-            <CategoryCard title={title} imageUrl={imageUrl} />
+            <CategoryCard 
+              title={title} 
+              imageUrl={imageUrl} 
+              isSelected={selectedCategories.includes(category)}
+              onClick={() => onCategoryToggle(category)}
+            />
           </li>
         ))}
       </ul>
